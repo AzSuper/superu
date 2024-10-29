@@ -3,20 +3,22 @@ import { type ClassValue, clsx } from 'clsx'
 import { Metadata } from 'next'
 import { twMerge } from 'tailwind-merge'
 
+// Utility function to merge class names
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
 }
 
+// Function to format a price into USD currency
 export const formatPrice = (price: number) => {
   const formatter = new Intl.NumberFormat('en-US', {
     style: 'currency',
     currency: 'USD',
   })
-
   return formatter.format(price)
 }
 
-export function constructMetadata({
+// Async function to construct metadata with default values
+export async function constructMetadata({
   title = 'CaseCobra - custom high-quality phone cases',
   description = 'Create custom high-quality phone cases in seconds',
   image = '/thumbnail.png',
@@ -26,7 +28,7 @@ export function constructMetadata({
   description?: string
   image?: string
   icons?: string
-} = {}): Metadata {
+} = {}): Promise<Metadata> {
   return {
     title,
     description,
