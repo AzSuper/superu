@@ -22,12 +22,12 @@ const CloseApp = () => {
           Portfolio :
         </p>
         <a
-          href="your-portfolio-link"
+          href="https://mohammadabozamel.vercel.app"
           target="_blank"
           rel="noopener noreferrer"
           className="text-zinc-950 hover:text-[#ea580c] underline"
         >
-          AzSuper
+          Mohammad abo zamel
         </a>
       </div>
     </div>
